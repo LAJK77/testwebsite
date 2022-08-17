@@ -11,6 +11,16 @@
         <link rel="stylesheet" href="/styles/fonts/stylesheet.css" type="text/css" charset="utf-8"/>        
     </head>
 <body>
+    <div id="progressbar"></div>
+    <div id="scrollPath"></div>
+    <script type="text/javascript">
+        let progress = document.getElementById('progressbar');
+        let totalHeight = document.body.scrollHeight - window.innerHeight;
+        window.onscroll = function(){
+            let progressHeight = (window.pageYOffset / totalHeight) * 100;
+            progress.style.height = progressHeight + "%";
+        }
+    </script>
     <div class="headerheader">
         <header>
             <ul>
@@ -45,10 +55,37 @@
         </header>
         </div> 
     <div class="herohero">
+        <img class="bg" src="images/bg.gif">
         <h1>WIFI CLAN</h1>
-        <a href="#">Feel The Conection</a>
-        <img class="bg" src="/images/bg.gif">
+        <a class="feelthe" href="#">Feel The Connection</a>
     </div>
+    <div class="container">
+        <div class="box">
+          <div class="icon">01</div>
+          <div class="content">
+            <h3>ESport</h3>
+            <p>Are you good at video games, but don't have the opportunity to play in any team? We support everyone, even beginners, so don't be afraid to give it a try!</p>
+            <a href="#" class="btn-1">Read More</a>
+          </div>
+        </div>
         
+          <div class="box">
+          <div class="icon">02</div>
+          <div class="content">
+            <h3>Editing</h3>
+            <p>Do you enjoy editing videos and doing special effects? Join our team of editors around the world. Show us what you can do!<br>&nbsp</p>
+            <a href="#" class="btn-2">Read More</a>
+          </div>
+        </div>
+        
+          <div class="box">
+          <div class="icon">03</div>
+          <div class="content">
+            <h3>Network</h3>
+            <p>We have also recently started working on Minecraft Network, which is full of awesome minigames, so fun for all passionate Minecraft players</p>
+            <a href="#" class="btn-3">Read More</a>
+          </div>
+        </div>
+      </div>        
 </body>
 </html>
